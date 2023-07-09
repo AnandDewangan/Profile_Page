@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+/* Reusable Class */
+.flex {
+  display: flex;
+  align-items: center;
+}
+.gray {
+  color: gray;
+  font-size: 1.3rem;
+}
+.active {
+  color: white;
+}
+
+/* Profile Page Section */
+.mainContainer {
+  display: grid;
+  grid-template-areas: "sidebar profileSection profileSection profileSection";
+  height: 100vh;
+  padding: 2rem 0 3rem 3rem;
+}
+.sidebar {
+  grid-area: sidebar;
+  width: 17vw;
+  padding: 1rem 0 2rem;
+}
+.profileSection {
+  grid-area: profileSection;
+  display: grid;
+  grid-template-areas:
+    "headerSection headerSection headerSection"
+    "leftSection rightSection rightSection";
+  padding: 0 3rem;
+  position: relative;
+}
+
+/* Sidebar Section */
+.box {
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(rgb(5, 92, 214), rgb(130, 48, 237));
+  flex-direction: column;
+  align-items: self-start;
+  padding-left: 2rem;
+  justify-content: center;
+  gap: 1rem;
+}
+h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-bottom: 1px solid rgb(164, 139, 245);
+  width: 80%;
+  padding-bottom: 1rem;
+}
+a {
+  color: rgb(164, 139, 245);
+}
+a:hover{
+  color: white;
+}
+.border {
+  border: none;
+}
+.menu {
+  font-size: 1.5rem;
+  justify-content: space-between;
+  width: 100%;
+}
+.arrow {
+  background-color: white;
+  color: rgb(82, 82, 82);
+  border-radius: 50% 0 0 50%;
+}
+
+/* Header Section Started */
+.headerSection {
+  grid-area: headerSection;
+  max-height: 10vh;
+  border-bottom: 1px solid gray;
+  justify-content: space-between;
+  width: 73vw;
+}
+.profile {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgb(82, 82, 82);
+}
+.smallProfilePic {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.smallProfileName {
+  font-size: 1.15rem;
+  color: gray;
+}
+
+/* Left Section */
+.leftSection {
+  grid-area: leftSection;
+  padding: 0 2rem;
+  height: 60vh;
+  max-width: 30vw;
+  border-right: 1px solid gray;
+}
+.topSection,
+.bottomSection,
+.address {
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.profileImg {
+  width: 200px;
+  border-radius: 50%;
+}
+.profileName {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgb(82, 82, 82);
+}
+span {
+  color: rgb(82, 82, 82);
+  font-weight: 500;
+}
+
+/* Right Section */
+.rightSection {
+  grid-area: rightSection;
+  height: 60vh;
+  padding-left: 2rem;
+  min-width: 40vw;
+}
+.mapSection {
+  width: 100%;
+  height: 330px;
+  border-radius: 30px;
+}
+.axis {
+  margin-top: 1rem;
+  gap: 10px;
+  align-items: center;
+  justify-content: end;
+}
+.axis p {
+  font-size: 0.85rem;
+}
+
+/* Chat Box Section */
+.chatBox {
+  background-color: rgb(4, 96, 209);
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 47px;
+  border-radius: 10px 10px 0 0;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  color: white;
+}
+.chatBox .chat i {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.chatBox p {
+  font-size: 1.1rem;
+  margin-left: 5px;
+}
+.chatBox i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.chatting {
+  bottom: 300px;
+  right: 47px;
+  border: 1px solid rgb(4, 96, 209);
+}
+.chatMenu {
+  border: 1px solid rgb(4, 96, 209);
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 47px;
+  border-bottom: none;
+  background-color: white;
+  padding: 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.chatImg {
+  gap: 10px;
+  justify-content: space-between;
+}
+.chatProfile img {
+  width: 30px;
+  border-radius: 50%;
+}
+.online {
+  width: 7px;
+  height: 7px;
+  background: green;
+  border-radius: 50%;
+}
+.offline {
+  width: 7px;
+  height: 7px;
+  background: rgb(82, 82, 82);
+  border-radius: 50%;
+}
+.chatProfileMenu {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+#fullChatBox {
+  transition: all 0.3s ease-in;
+}
+
+/* Coming Soon Section */
+.coming,
+.soon {
+  width: 30vw;
+  justify-content: center;
+  font-size: 2.7rem;
+  padding: 0;
+  border: none;
+  height: 50vh;
+  color: rgb(229, 229, 229);
+}
+.b-none {
+  border: none;
+}
+
+/* Home Section */
+.profilePageAll {
+  width: 550px;
+  height: 600px;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgb(235, 235, 235);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+}
+.headerProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 30px 30px 0 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgb(86, 86, 86);
+  background-color: rgb(234, 234, 234);
+}
+.chatAllSection{
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 500px;
+  padding: 0 2rem;
+}
+.chatProfile{
+  gap: 1rem;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+.chatProfile a{
+  cursor: pointer;
+}
+.chatProfile a{
+  font-size: 1.15rem;
+  color: rgb(69, 69, 69);
+}
+.home{
+  padding: 1rem 0;
+  border-bottom: 1px solid gray;
+}

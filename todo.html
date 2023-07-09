@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo Section</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="sidebar">
+        <div class="box flex" id="box">
+          <div class="flex menu">
+            <h4><a href="profile.html" id="profileMenu">Profile</a></h4>
+            <div class="arrow" id="arrow"></div>
+          </div>
+          <div class="flex menu">
+            <h4><a href="posts.html" id="postsMenu">Posts</a></h4>
+          </div>
+          <div class="flex menu">
+            <h4><a href="gallery.html" id="gallaryMenu">Gallery</a></h4>
+          </div>
+          <div class="flex menu">
+            <h4 class="border" id="todoMenu"><a href="todo.html">ToDo</a></h4>
+          </div>
+        </div>
+      </div>
+      <div class="profileSection">
+        <div class="headerSection flex" id="headerSection">
+            <p class="profile">ToDo</p>
+        </div>
+        <div class="leftSection b-none">
+            <div class="flex coming">
+                <h1>Coming</h1>
+            </div>
+        </div>
+        <div class="rightSection" id="rightSection">
+            <div class="soon flex">
+                <h1>Soon</h1>
+            </div>
+            <div class="chatBox flex" id="chatBoxHide">
+                <div class="chat flex">
+                  <i class="bx bx-message-square-minus"></i>
+                  <p>Chats</p>
+                </div>
+                <i class="bx bx-chevron-up" id="halfBox"></i>
+              </div>
+          <div class="fullChat" id="fullChatBox">
+            <div class="flex chatBox chatting">
+              <div class="flex chat">
+                <i class="bx bx-message-square-minus"></i>
+                <p>Chats</p>
+              </div>
+              <i class="bx bx-chevron-down" id="fullBox"></i>
+            </div>
+            <div class="chatMenu">
+              <div class="chatProfileMenu flex" id="chatProfileMenu"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
